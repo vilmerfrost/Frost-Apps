@@ -1,123 +1,159 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ByggTid – Flexibel tidsrapportering för bygg och hantverkare</title>
+    <title>ByggTid – Flexibel tidsrapportering för bygg &amp; hantverkare</title>
+    <!-- Google Font for clean typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <!-- Font Awesome for illustrative icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-poYXqkN+kfjbPcPYryjQGpIPh65hI+YwXCqU2uzhSpMz1lE7bH5cHv8nSRQuVHV0wzmvpIdHbVIgk5hCFAKo2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Google Fonts for a clean modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- Header with navigation -->
-    <header class="header">
-      <nav class="nav-container">
-        <div class="logo-container">
-          <img src="assets/logo.png" alt="ByggTid logo" class="logo" />
-          <span class="site-name">ByggTid</span>
+    <!-- Header & Navigation -->
+    <header>
+      <nav class="navbar container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="ByggTid logotyp" />
         </div>
         <ul class="nav-links">
           <li><a href="#features">Funktioner</a></li>
           <li><a href="#about">Om oss</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
-        <a href="#cta" class="nav-cta-button">Prova gratis</a>
+        <a href="#kontakt" class="btn nav-btn">Prova gratis</a>
       </nav>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="cta">
-      <div class="hero-content">
-        <h1>Flexibel tidsrapportering för bygg &amp; hantverkare</h1>
+      <div class="hero-inner container">
+        <h1>Förenkla dina projekt<br />med ByggTid</h1>
         <p>
-          ByggTid gör det enkelt att följa och rapportera arbetstid, material
-          och projektstatus i realtid. Anpassa appen efter just ditt företag
-          och dina projekt.
+          Låt byggare och hantverkare rapportera tid, material och få full
+          överblick – när som helst, var som helst.
         </p>
-        <a href="#kontakt" class="cta-button">Starta gratis provperiod</a>
+        <div class="hero-buttons">
+          <a href="#features" class="btn btn-primary">Utforska funktioner</a>
+          <a href="#kontakt" class="btn btn-secondary">Prova gratis</a>
+        </div>
       </div>
+      <!-- Wave graphic that transitions to next section -->
+      <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f7fbff" fill-opacity="1" d="M0,256L30,240C60,224,120,192,180,181.3C240,171,300,181,360,181.3C420,181,480,171,540,170.7C600,171,660,181,720,192C780,203,840,213,900,213.3C960,213,1020,203,1080,197.3C1140,192,1200,192,1260,186.7C1320,181,1380,171,1410,165.3L1440,160L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
-      <h2>Smarta funktioner</h2>
-      <div class="features-grid">
-        <div class="feature-card fade-in">
-          <div class="icon-circle">
-            <!-- Using Unicode emoji as simple icon placeholder -->
-            <span class="icon">⏱️</span>
+      <div class="container">
+        <h2>Nyckelfunktioner</h2>
+        <div class="feature-grid">
+          <div class="feature">
+            <div class="icon-wrapper">
+              <!-- Clock icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+            </div>
+            <h3>Tidsrapportering</h3>
+            <p>
+              Registrera tid per projekt med en enkel start/stop‑knapp eller manuell
+              inmatning. Full kontroll över varje minut.
+            </p>
           </div>
-          <h3>Snabb rapportering</h3>
-          <p>
-            Registrera tid med bara några klick. Perfekt för stressiga
-            arbetsdagar ute på byggplatsen.
-          </p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="icon-circle">
-            <span class="icon">🔧</span>
+          <div class="feature">
+            <div class="icon-wrapper">
+              <!-- Wrench & screwdriver icon representing customization -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+              </svg>
+            </div>
+            <h3>Anpassningsbar</h3>
+            <p>
+              Lägg till moduler för materiallistor, foton och digitala signaturer.
+              Anpassa appen efter just ditt arbetsflöde.
+            </p>
           </div>
-          <h3>Anpassningsbar</h3>
-          <p>
-            Välj funktioner och moduler efter ditt företags unika behov. Lägg
-            till materiallistor, foton, digitala signaturer med mera.
-          </p>
-        </div>
-        <div class="feature-card fade-in">
-          <div class="icon-circle">
-            <span class="icon">📊</span>
+          <div class="feature">
+            <div class="icon-wrapper">
+              <!-- Chart bar icon representing analytics -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+              </svg>
+            </div>
+            <h3>Analyser &amp; rapporter</h3>
+            <p>
+              Få en tydlig överblick över kostnader och projekt. Exportera rapporter
+              för fakturering och löneunderlag på sekunden.
+            </p>
           </div>
-          <h3>Analyser &amp; rapporter</h3>
-          <p>
-            Få full överblick över projekt och kostnader. Exportera
-            rapporter för fakturering och löneunderlag.
-          </p>
+          <div class="feature">
+            <div class="icon-wrapper">
+              <!-- Mobile phone icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+              </svg>
+            </div>
+            <h3>Mobilvänlig</h3>
+            <p>
+              Jobba på fältet eller i kontoret – vår app fungerar lika bra på mobilen
+              som på datorn.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-      <div class="about-content">
-        <h2>Om ByggTid</h2>
-        <p>
-          Vi är ett svenskt SaaS-bolag som brinner för att förenkla det dagliga
-          arbetet för byggare och hantverkare. Vår app är utvecklad i nära
-          samarbete med branschfolk och kan anpassas efter just ditt arbetsflöde.
-        </p>
-        <p>
-          Med ByggTid sparar du tid, minskar administrationen och får bättre
-          kontroll över projekten – direkt i mobilen eller på datorn.
-        </p>
+      <div class="container about-grid">
+        <div class="about-text">
+          <h2>Om ByggTid</h2>
+          <p>
+            Vi är ett svenskt SaaS‑bolag som brinner för att förenkla vardagen
+            för byggare och hantverkare. Genom att utveckla vår tjänst i nära
+            samarbete med branschfolk levererar vi en lösning som faktiskt
+            fungerar i verkligheten.
+          </p>
+          <p>
+            ByggTid hjälper dig att spara tid och minska administrationen
+            samtidigt som du får bättre kontroll över dina projekt. Allt
+            tillgängligt via mobilen eller datorn, när du behöver det.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="assets/hero-bg.png" alt="Arbetare med smartphone" />
+        </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="kontakt">
-      <h2>Kontakta oss</h2>
-      <p>
-        Vill du veta mer eller komma igång direkt? Tveka inte att höra av
-        dig – vi svarar gärna på dina frågor!
-      </p>
-      <div class="contact-details">
-        <div class="detail-item">
-          <strong>Telefon:</strong> <a href="tel:0765622692">076‑562 26 92</a>
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <h2>Kontakta oss</h2>
+          <p>
+            Har du frågor eller vill du veta mer? Tveka inte att höra av dig – vi svarar
+            gärna!
+          </p>
+          <ul class="contact-details">
+            <li><i class="fas fa-phone"></i> <a href="tel:0765622692">076‑562 26 92</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:vilmer.frost@gmail.com">vilmer.frost@gmail.com</a></li>
+          </ul>
         </div>
-        <div class="detail-item">
-          <strong>E‑post:</strong>
-          <a href="mailto:vilmer.frost@gmail.com">vilmer.frost@gmail.com</a>
+        <div class="contact-form-container">
+          <form class="contact-form" onsubmit="return false;">
+            <input type="text" placeholder="Namn" required />
+            <input type="email" placeholder="E‑post" required />
+            <textarea placeholder="Meddelande" required></textarea>
+            <button type="submit" class="btn btn-primary">Skicka</button>
+          </form>
         </div>
       </div>
-      <form class="contact-form" onsubmit="return false;">
-        <input type="text" placeholder="Namn" required />
-        <input type="email" placeholder="E‑post" required />
-        <textarea placeholder="Ditt meddelande" rows="4" required></textarea>
-        <button type="submit">Skicka</button>
-      </form>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
       <p>&copy; <span id="year"></span> ByggTid – alla rättigheter förbehållna.</p>
     </footer>
 
