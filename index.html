@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ByggTid – Flexibel tidsrapportering för bygg och hantverkare</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts for a clean modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header with navigation -->
+    <header class="header">
+      <nav class="nav-container">
+        <div class="logo-container">
+          <img src="assets/logo.png" alt="ByggTid logo" class="logo" />
+          <span class="site-name">ByggTid</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#features">Funktioner</a></li>
+          <li><a href="#about">Om oss</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="#cta" class="nav-cta-button">Prova gratis</a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="cta">
+      <div class="hero-content">
+        <h1>Flexibel tidsrapportering för bygg &amp; hantverkare</h1>
+        <p>
+          ByggTid gör det enkelt att följa och rapportera arbetstid, material
+          och projektstatus i realtid. Anpassa appen efter just ditt företag
+          och dina projekt.
+        </p>
+        <a href="#kontakt" class="cta-button">Starta gratis provperiod</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <h2>Smarta funktioner</h2>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="icon-circle">
+            <!-- Using Unicode emoji as simple icon placeholder -->
+            <span class="icon">⏱️</span>
+          </div>
+          <h3>Snabb rapportering</h3>
+          <p>
+            Registrera tid med bara några klick. Perfekt för stressiga
+            arbetsdagar ute på byggplatsen.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="icon-circle">
+            <span class="icon">🔧</span>
+          </div>
+          <h3>Anpassningsbar</h3>
+          <p>
+            Välj funktioner och moduler efter ditt företags unika behov. Lägg
+            till materiallistor, foton, digitala signaturer med mera.
+          </p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="icon-circle">
+            <span class="icon">📊</span>
+          </div>
+          <h3>Analyser &amp; rapporter</h3>
+          <p>
+            Få full överblick över projekt och kostnader. Exportera
+            rapporter för fakturering och löneunderlag.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+      <div class="about-content">
+        <h2>Om ByggTid</h2>
+        <p>
+          Vi är ett svenskt SaaS-bolag som brinner för att förenkla det dagliga
+          arbetet för byggare och hantverkare. Vår app är utvecklad i nära
+          samarbete med branschfolk och kan anpassas efter just ditt arbetsflöde.
+        </p>
+        <p>
+          Med ByggTid sparar du tid, minskar administrationen och får bättre
+          kontroll över projekten – direkt i mobilen eller på datorn.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="kontakt">
+      <h2>Kontakta oss</h2>
+      <p>
+        Vill du veta mer eller komma igång direkt? Tveka inte att höra av
+        dig – vi svarar gärna på dina frågor!
+      </p>
+      <div class="contact-details">
+        <div class="detail-item">
+          <strong>Telefon:</strong> <a href="tel:0765622692">076‑562 26 92</a>
+        </div>
+        <div class="detail-item">
+          <strong>E‑post:</strong>
+          <a href="mailto:vilmer.frost@gmail.com">vilmer.frost@gmail.com</a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="return false;">
+        <input type="text" placeholder="Namn" required />
+        <input type="email" placeholder="E‑post" required />
+        <textarea placeholder="Ditt meddelande" rows="4" required></textarea>
+        <button type="submit">Skicka</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> ByggTid – alla rättigheter förbehållna.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
