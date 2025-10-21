@@ -1,38 +1,52 @@
-/*
- * ByggTid – interaktivitet och effekter
- */
+const chat = document.getElementById("chat-bubbles");
+const input = document.getElementById("prompt-input");
+const sendBtn = document.getElementById("send-btn");
+const onboarding = document.getElementById("onboarding");
+const startBtn = document.getElementById("start-btn");
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Sätt aktuellt år i footern
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear().toString();
-  }
+function createBubble(text, isUser=false) {
+  const b = document.createElement("div");
+  b.className = "bubble" + (isUser ? " user" : "");
+  b.textContent = text;
+  chat.appendChild(b);
+  chat.scrollTop = chat.scrollHeight;
+}
 
-  // Lägg till/ta bort bakgrund på header när man scrollar
-  const header = document.querySelector('header');
-  const toggleHeaderBg = () => {
-    if (window.scrollY > 80) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  };
-  window.addEventListener('scroll', toggleHeaderBg);
-  toggleHeaderBg();
+function simulateTyping(text) {
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  chat.appendChild(bubble);
+  let i = 0;
+  const timer = setInterval(() => {
+    bubble.textContent = text.slice(0, i);
+    i++;
+    chat.scrollTop = chat.scrollHeight;
+    if (i > text.length) clearInterval(timer);
+  }, 35);
+}
 
-  // Reveal-effekt för funktionskort när de kommer in i viewport
-  const cards = document.querySelectorAll('.feature');
-  const options = {
-    threshold: 0.15
-  };
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, options);
-  cards.forEach(card => observer.observe(card));
+function frostIntro() {
+  simulateTyping("Hej! Jag är din AI-assistent. Vad vill du prata om idag?");
+}
+
+sendBtn.addEventListener("click", () => {
+  const value = input.value.trim();
+  if (!value) return;
+  createBubble(value, true);
+  input.value = "";
+  sendBtn.disabled = true;
+  setTimeout(() => simulateTyping("Jag förstår! Berätta gärna mer om det."), 700);
+});
+
+input.addEventListener("input", () => {
+  sendBtn.disabled = input.value.trim().length === 0;
+});
+
+startBtn.addEventListener("click", () => {
+  onboarding.classList.add("hidden");
+  frostIntro();
+});
+
+window.addEventListener("load", () => {
+  onboarding.classList.remove("hidden");
 });
