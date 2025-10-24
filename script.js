@@ -1,38 +1,32 @@
-/*
- * ByggTid – interaktivitet och effekter
- */
+// mobilt nav
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('#menu');
+if (toggle && menu){
+  toggle.addEventListener('click', ()=>{
+    const open = menu.classList.toggle('show');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+}
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Sätt aktuellt år i footern
-  const yearSpan = document.getElementById('year');
-  if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear().toString();
-  }
-
-  // Lägg till/ta bort bakgrund på header när man scrollar
-  const header = document.querySelector('header');
-  const toggleHeaderBg = () => {
-    if (window.scrollY > 80) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+// smooth scroll för interna länkar
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      menu?.classList.remove('show');
+      toggle?.setAttribute('aria-expanded','false');
     }
-  };
-  window.addEventListener('scroll', toggleHeaderBg);
-  toggleHeaderBg();
-
-  // Reveal-effekt för funktionskort när de kommer in i viewport
-  const cards = document.querySelectorAll('.feature');
-  const options = {
-    threshold: 0.15
-  };
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, options);
-  cards.forEach(card => observer.observe(card));
+  });
 });
+
+// årtal i footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// header shadow vid scroll
+const header = document.querySelector('.site-header');
+const onScroll = () => header?.setAttribute('data-scrolled', window.scrollY > 4);
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
