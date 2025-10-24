@@ -11,15 +11,12 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
-  <!-- Skip to content -->
   <a class="skip" href="#main">Hoppa till innehåll</a>
-
   <header class="site-header" data-scrolled="false">
     <a href="#top" class="brand" aria-label="Frost Apps startsida">
-      <img src="assets/logo.svg" alt="" width="28" height="28" />
+      <img src="assets/logo.svg" width="28" height="28" alt="" />
       <span>Frost Apps</span>
     </a>
-
     <nav class="nav" aria-label="Huvudmeny">
       <button class="nav-toggle" aria-expanded="false" aria-controls="menu">
         <span class="nav-toggle__bar"></span>
@@ -38,7 +35,6 @@
   </header>
 
   <main id="main">
-    <!-- HERO -->
     <section class="hero">
       <div class="hero__content">
         <p class="badge">🧊 Frost Apps</p>
@@ -46,7 +42,7 @@
         <p class="lead">Enkel tidsrapportering, projektöversikt i realtid och automatiska rapporter – i en snygg och smidig app.</p>
         <div class="hero__cta">
           <a href="#losningar" class="btn btn-primary btn-lg">Utforska lösningar</a>
-          <a href="assets/Frost-Apps-Presentation.pdf" class="btn btn-ghost" download>Ladda ned presentation</a>
+          <a href="#priser" class="btn btn-ghost">Se priser</a>
         </div>
         <p class="hero__meta">Presenterad av <strong>Vilmer Frost</strong>, grundare och utvecklare</p>
       </div>
@@ -56,7 +52,6 @@
       </div>
     </section>
 
-    <!-- LÖSNINGAR -->
     <section id="losningar" class="section section--grid">
       <header class="section__header">
         <h2>Våra lösningar</h2>
@@ -64,38 +59,33 @@
       </header>
       <div class="cards">
         <article class="card hover-raise">
-          <img src="assets/icons/time.svg" alt="" class="icon">
+          <img src="assets/icons/time.svg" class="icon" alt="">
           <h3>Smidig digital tidsrapportering</h3>
           <p>Alla anställda rapporterar timmar direkt i mobilen. Inga papperslappar eller missar – bara realtidsdata.</p>
         </article>
-
         <article class="card hover-raise">
-          <img src="assets/icons/dashboard.svg" alt="" class="icon">
+          <img src="assets/icons/dashboard.svg" class="icon" alt="">
           <h3>Projektöversikt i realtid</h3>
           <p>Ledningen ser timmar, kostnader och framsteg live. Beslut baseras på fakta, inte gissningar.</p>
         </article>
-
         <article class="card hover-raise">
-          <img src="assets/icons/chat.svg" alt="" class="icon">
+          <img src="assets/icons/chat.svg" class="icon" alt="">
           <h3>Förbättrad kommunikation</h3>
           <p>All information samlas på ett ställe. Bättre samarbete mellan kontor och byggplats – färre missförstånd.</p>
         </article>
-
         <article class="card hover-raise">
-          <img src="assets/icons/report.svg" alt="" class="icon">
+          <img src="assets/icons/report.svg" class="icon" alt="">
           <h3>Automatiska rapporter</h3>
           <p>Systemet skapar rapporter och sammanställningar automatiskt. Full kontroll utan extra administration.</p>
         </article>
       </div>
     </section>
 
-    <!-- VARFÖR -->
     <section class="section section--alt">
       <header class="section__header">
         <h2>Varför Frost Apps?</h2>
         <p>Född ur byggvardagen. Fokus på enkelhet, fart och transparens.</p>
       </header>
-
       <div class="features">
         <div class="feature hover-outline">
           <h4>Enkelhet</h4>
@@ -112,13 +102,11 @@
       </div>
     </section>
 
-    <!-- PRISER -->
     <section id="priser" class="section">
       <header class="section__header">
         <h2>Våra priser</h2>
         <p>Enkelt och tydligt – utan bindningstid. Frost Apps växer med ditt företag.</p>
       </header>
-
       <div class="pricing">
         <article class="price card-glass">
           <h3>START</h3>
@@ -130,7 +118,6 @@
           </ul>
           <a href="#kontakt" class="btn btn-outline">Boka start</a>
         </article>
-
         <article class="price price--highlight card-glass hover-glow">
           <div class="ribbon">Populär</div>
           <h3>STANDARD</h3>
@@ -141,7 +128,6 @@
           </ul>
           <a href="#kontakt" class="btn btn-primary">Kom igång</a>
         </article>
-
         <article class="price card-glass">
           <h3>PREMIUM</h3>
           <p class="price__amount">Anpassad offert</p>
@@ -155,13 +141,11 @@
       </div>
     </section>
 
-    <!-- MARKNAD -->
     <section id="marknad" class="section section--grid">
       <header class="section__header">
         <h2>Marknadspotential</h2>
         <p>Byggbranschen i Sverige går igenom en enorm digital förändring – och behovet är akut.</p>
       </header>
-
       <div class="steps">
         <div class="step hover-raise">
           <span class="step__num">01</span>
@@ -186,7 +170,6 @@
       </div>
     </section>
 
-    <!-- OM -->
     <section id="om" class="section section--alt">
       <div class="about">
         <div>
@@ -200,29 +183,24 @@
       </div>
     </section>
 
-    <!-- KONTAKT -->
     <section id="kontakt" class="section">
       <header class="section__header">
         <h2>Kontakta oss</h2>
         <p>Vi hjälper företag att spara tid, minska fel och växa med digital precision.</p>
       </header>
-
       <div class="contact">
         <a class="contact__item" href="tel:+46765622692">📞 07 656 226 92</a>
         <a class="contact__item" href="mailto:vilmer.frost@gmail.com?subject=Intresse%20Frost%20Apps">✉️ vilmer.frost@gmail.com</a>
         <a class="contact__item" href="#top">⬆️ Till toppen</a>
       </div>
-
-      <form class="contact-form" action="https://formsubmit.co/your@email" method="POST">
-        <input type="hidden" name="_subject" value="Kontakt via frostapps.se">
-        <input type="hidden" name="_captcha" value="false">
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Skickat! (Koppla egen endpoint senare)');">
         <div class="grid">
           <input required name="name" placeholder="Namn" autocomplete="name">
-          <input required type="email" name="email" placeholder="E-post" autocomplete="email">
+          <input required type="email" name="email" placeholder="E‑post" autocomplete="email">
         </div>
         <textarea required name="message" rows="4" placeholder="Hur kan vi hjälpa dig?"></textarea>
         <button class="btn btn-primary" type="submit">Skicka</button>
-        <p class="form-note">Byt action-URL till din egen formulärtjänst eller GitHub Pages-vänlig endpoint.</p>
+        <p class="form-note">Koppla valfri formulärtjänst (Formspree, Basin, Netlify Forms) när du vill.</p>
       </form>
     </section>
   </main>
